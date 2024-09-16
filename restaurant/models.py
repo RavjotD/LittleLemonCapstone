@@ -14,4 +14,4 @@ class Booking(models.Model):
     Name = models.CharField(max_length=255)
     No_of_guest = models.IntegerField()
     BookingDate = models.DateTimeField()
-    
+
