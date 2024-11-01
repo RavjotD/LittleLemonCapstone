@@ -4,6 +4,7 @@ body {
     margin-bottom: 3rem;
     margin-left: 5%;
     margin-right: 5%;
+    background-color:#1A1A19;
 }
 
 
@@ -90,6 +91,7 @@ section {
 
 article {
     flex:1;
+    background-color: #333333;
 }
 
 article img {
@@ -115,7 +117,7 @@ label {
     display: block;
   }
 
-input{
+input, select{
     width: 80%;
     display: block;
     padding: .5rem 1rem;
@@ -233,6 +235,10 @@ footer p {
 .menu-price{
     display: block;
     font-size: 1rem;
+}
+#Menu{
+    background-color: #EE9972;
+
 }
 
 @media (max-width: 800px) {
