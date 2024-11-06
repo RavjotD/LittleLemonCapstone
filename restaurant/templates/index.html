@@ -11,8 +11,8 @@
       <a href="#" class="cta"> Book now </a>
     </article>
   </section>
-  <section>
-    <article class="Menu">
+  <section >
+    <article class="Card">
       <h2>Our New Menu</h2>
       <img src="{% static 'img/grill.jpg' %}">
       <p>
@@ -22,7 +22,7 @@
         <a href="{% url 'menu' %}">See our new menu</a>
       </p>
     </article>
-    <article>
+    <article class="Card">
       <h2>Book a table</h2>
       <img src="{% static 'img/salad.jpg' %}">
       <p>
@@ -32,7 +32,7 @@
         <a href="{% url 'book' %}">Book your table now</a>
       </p>
     </article>
-    <article>
+    <article class="Card">
       <h2>Opening Hours</h2>
       <img src="{% static 'img/head_chef.jpg' %}">
       <p>
@@ -45,4 +45,24 @@
       </ul>
     </article>
   </section>
+  <section class="gallery">
+    <h1>Dine in for a Little Lemon-y Experience</h2>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="{% static 'img/Bruschetta.jpg' %}" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'img/lemon dessert.jpg' %}" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'img/restaurant_inside.jpg' %}" style="width:100%">
+        </div>
+        <!-- Add more slides as needed -->
+    </div>
+
+</section>    
+<section class="outdoor" style="background-image: url('{% static 'img/restaurant_rooftop.jpg' %}');">
+<h1>Scenic Rooftop Dining</h2>
+</section>
+<script src="{% static 'js/slideshow.js' %}"></script>
 {% endblock %}

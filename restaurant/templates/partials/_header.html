@@ -4,10 +4,10 @@
 </header>
 <nav>
   <ul>
-    <li><a href="{% url 'home' %}">Home</a></li>
-    <li><a href="{% url 'about' %}">About</a></li>
-    <li><a href="{% url 'menu' %}">Menu</a></li>
-    <li><a href="{% url 'book' %}">Book</a></li>
-    <li><a href="{% url 'reservations' %}">Reservations</a></li>
+    <li><a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+    <li><a href="{% url 'about' %}" class="{% if request.path == '/about/' %}active{% endif %}">About</a></li>
+    <li><a href="{% url 'menu' %}" class="{% if request.path == '/menu/' %}active{% endif %}">Menu</a></li>
+    <li><a href="{% url 'book' %}" class="{% if request.path == '/book/' %}active{% endif %}">Book</a></li>
+    <li><a href="{% url 'reservations' %}" class="{% if request.path == '/reservations/' %}active{% endif %}">Reservations</a></li>
   </ul>
 </nav>
