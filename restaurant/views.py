@@ -17,7 +17,7 @@ from .models import Booking
 from datetime import datetime
 import json
 from django.views.decorators.csrf import csrf_exempt
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 
 
 # Views for HTTP Responses.
@@ -59,25 +59,36 @@ def display_menu_item(request, pk=None):
 @csrf_exempt
 def bookings(request):
     if request.method == 'POST':
-        data = json.load(request)
-        exist = Booking.objects.filter(reservation_date=data['reservation_date']).filter(
-            reservation_slot=data['reservation_slot']).exists()
-        if exist==False:
+        data = json.loads(request.body.decode('utf-8'))
+        booking_date = datetime.strptime(data['BookingDate'], '%Y-%m-%d').date()
+
+        exist = Booking.objects.filter(
+            BookingDate=booking_date,
+            reservation_slot=data['reservation_slot']
+        ).exists()
+
+        if not exist:
             booking = Booking(
-                first_name=data['first_name'],
-                reservation_date=data['reservation_date'],
+                Name=data['Name'],
+                BookingDate=booking_date,
                 reservation_slot=data['reservation_slot'],
+                No_of_guest=data['No_of_guest']
             )
             booking.save()
+            return JsonResponse({"success": 1})
         else:
-            return HttpResponse("{'error':1}", content_type='application/json')
-    
-    date = request.GET.get('date',datetime.today().date())
+            return JsonResponse({"error": 1})
 
-    bookings = Booking.objects.all().filter(reservation_date=date)
+    date_str = request.GET.get('date')
+    try:
+        date = datetime.strptime(date_str, '%Y-%m-%d').date()
+    except ValueError:
+        date = datetime.today().date()
+
+    bookings = Booking.objects.filter(BookingDate=date)
     booking_json = serializers.serialize('json', bookings)
-
     return HttpResponse(booking_json, content_type='application/json')
+
 
 
 

@@ -3,16 +3,23 @@
 {% block content %}
 <h1>Menu</h1>
 <!--Begin col-->
-<div class="column">
+<div class="menu-list">
     {% for item in menu.menu %}
-    <p>
-        <a href="{% url 'menu_item' pk=item.pk %}">
-            {{ item.name }}
-            </a>
-        <span class="menu-price">
-            ${{ item.price }}.00
-        </span>
-    </p>
+    <div class="menu-item">
+        <div class="menu-img">
+            <img src="/static/img/menu_items/{{item.Title}}.jpg" alt="{{ item.Title}}" />
+        </div>
+        <div class="menu-info">
+            <h2><a href="{% url 'menu_item' pk=item.pk %}">
+                {{ item.Title }}
+                </a></h2>
+                <p>{{ item.Description}}</p>
+                <span class="menu-price">
+                ${{ item.Price }}</span>
+               
+        </div>
+    </div>
+    
     {% endfor %}
 </div>
 <!--End col-->

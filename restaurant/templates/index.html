@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<!-- Hero -->
 <section>
     <article id="hero">
       <h1 class="heading_shadow">SPECIAL OFFER</h1>
@@ -11,10 +12,11 @@
       <a href="#" class="cta"> Book now </a>
     </article>
   </section>
+  <!-- Cards -->
   <section >
     <article class="Card">
       <h2>Our New Menu</h2>
-      <img src="{% static 'img/grill.jpg' %}">
+      <img src="{% static 'img/menu_items/grill.jpg' %}">
       <p>
         Our menu consists of 12-15 seasonal items based on Italian, Greek, and Turkish culture.
       </p>
@@ -45,11 +47,12 @@
       </ul>
     </article>
   </section>
+  <!-- Slideshow Animation -->
   <section class="gallery">
     <h1>Dine in for a Little Lemon-y Experience</h2>
     <div class="slideshow-container">
         <div class="mySlides fade">
-            <img src="{% static 'img/Bruschetta.jpg' %}" style="width:100%">
+            <img src="{% static 'img/menu_items/Bruschetta.jpg' %}" style="width:100%">
         </div>
         <div class="mySlides fade">
             <img src="{% static 'img/lemon dessert.jpg' %}" style="width:100%">
@@ -57,7 +60,6 @@
         <div class="mySlides fade">
             <img src="{% static 'img/restaurant_inside.jpg' %}" style="width:100%">
         </div>
-        <!-- Add more slides as needed -->
     </div>
 
 </section>    
