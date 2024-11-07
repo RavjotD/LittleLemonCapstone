@@ -1,5 +1,5 @@
 # Full Stack Project
-- **Background**: This project is from the scope of my knowledge acquired from my Meta Backend Professional Certifcation that assures backend practices.
+- **Background**: This project scope is from my knowledge acquired from my Meta Backend Professional Certification that assures backend practices.
 - **Description**: Full Stack Python application using Django's web framework for practical restaurant owners.
 - **Tech Stack**: Python, Django, SQL, Django REST Framework, HTML, CSS, JavaScript.
 - **Practices**: 
@@ -12,7 +12,6 @@
 
 - Robust reservation system integrated with API endpoints and an admin panel for efficient management.
 - API endpoints for Data Transmission.
-
 
 
 ##  Getting Started with Your Django Project
