@@ -1,5 +1,5 @@
 # Full Stack Project
-- **Background**: This project scope is from my knowledge acquired from my Meta Backend Professional Certification that assures backend practices.
+- **Background**: This project scope is from my knowledge acquired from my Meta Backend Professional Certification that assures backend practices. A considerable focal point of this applicatin is based of RESTful API development that highlights the purpose of HTTP request and response cycle.
 - **Description**: Full Stack Python application using Django's web framework for practical restaurant owners.
 - **Tech Stack**: Python, Django, SQL, Django REST Framework, HTML, CSS, JavaScript.
 - **Practices**: 
