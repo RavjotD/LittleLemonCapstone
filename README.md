@@ -1,5 +1,5 @@
 # Full Stack Project
-- **Background**: This project scope is from my knowledge acquired from my Meta Backend Professional Certification that assures backend practices. A considerable focal point of this applicatin is based of RESTful API development that highlights the purpose of HTTP request and response cycle.
+- **Background**: This project scope is from my knowledge acquired from my Meta Backend Professional Certification that assures backend practices. A considerable focal point of this application is based on RESTful API development that highlights the purpose of HTTP request and response cycle.
 - **Description**: Full Stack Python application using Django's web framework for practical restaurant owners.
 - **Tech Stack**: Python, Django, SQL, Django REST Framework, HTML, CSS, JavaScript.
 - **Practices**: 
@@ -45,8 +45,7 @@ pip --version
 ## Step 2: Clone the Repository
 Clone this project to your local machine using Git. Open your terminal and run the following command:
 
-bash
-```
+```sh
 git clone <https:repoLink.git>
 ```
 
@@ -57,8 +56,7 @@ Open Visual Studio Code and navigate to File > Open Folder, then select the fold
 
 You can also open the project directly from the terminal:
 
-bash
-```
+```sh
 code .<projectfolder>
 ```
 This will open the project in VS Code.
@@ -70,15 +68,13 @@ Activate the included virtual enironment using:
 
 On Windows:
 
-bash
-```
+```sh
 .venv\Scripts\activate
 ```
 
 On macOS/Linux:
 
-bash
-```
+```sh
 source .venv/bin/activate
 ```
 Your terminal should now show (venv) at the beginning of the prompt, indicating the virtual environment is active.
@@ -86,23 +82,21 @@ Your terminal should now show (venv) at the beginning of the prompt, indicating 
 ## Step 5: Install Dependencies
 With the virtual environment activated, install the required project dependencies:
 
-bash
-```
+```sh
 pip install -r requirements.txt
 ```
 This will install Django, Django REST Framework, and other necessary dependencies listed in the requirements.txt file.
 
 ## Process Migration:
 Make sure all data is up to date by runnning following:
-```
+```sh
 python manage.py makemigrations
 python manage.py migrate
 ```
 
 ## Launch Server
 Run the application using:
-bash
-```
+```sh
 python manage.py runserver
 ```
 Test out the RESTful API endpoints listed in requirements.txt
