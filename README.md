@@ -14,7 +14,7 @@
 -  RESTFul API endpoints for data transmission using JSON.
 
 
-##  Getting Started with PRojectProject
+##  Getting Started with Project
 
 This guide will walk you through setting up the Django project, installing the necessary dependencies, and launching the project in Visual Studio Code (VS Code).
 
@@ -22,9 +22,18 @@ To get started with this project, follow the steps below:
 
 1. **Download the Project:**
 
-   You can download the project zip file from the repository. 
+   You can download the project zip file from the repository.
+   Clone the Repository
+   Clone this project to your local machine using Git. Open your terminal and run the following command:
 
-## Prerequisites
+  ```sh
+  git clone <https:repoLink.git>
+  ```
+
+If you don't use Git, you can also download the ZIP file from the GitHub repository and extract it on your machine.
+   
+
+3. Prerequisites
 
 Before you start, ensure you have the following installed on your machine:
 
@@ -34,7 +43,7 @@ Before you start, ensure you have the following installed on your machine:
 - **Visual Studio Code** (VS Code)
 - **MySQL** (or your preferred database system)
 
-## Step 1: Install Python and Pip
+3. Install Python and Pip
 
 Make sure Python and Pip are installed on your machine. You can download Python from [python.org](https://www.python.org/downloads/). Pip is included with Python, but you can verify its installation with:
 ```sh
@@ -42,16 +51,8 @@ python --version
 pip --version
 ```
 
-## Step 2: Clone the Repository
-Clone this project to your local machine using Git. Open your terminal and run the following command:
 
-```sh
-git clone <https:repoLink.git>
-```
-
-If you don't use Git, you can also download the ZIP file from the GitHub repository and extract it on your machine.
-
-## Step 3: Open the Project in VS Code
+3. Open the Project in VS Code
 Open Visual Studio Code and navigate to File > Open Folder, then select the folder where you cloned or extracted the project.
 
 You can also open the project directly from the terminal:
@@ -61,7 +62,7 @@ code .<projectfolder>
 ```
 This will open the project in VS Code.
 
-## Step 4: Create and Activate a Virtual Environment
+4. Create and Activate a Virtual Environment
 It’s highly recommended to create a virtual environment to keep your project dependencies isolated.
 
 Activate the included virtual enironment using:
@@ -79,7 +80,7 @@ source .venv/bin/activate
 ```
 Your terminal should now show (venv) at the beginning of the prompt, indicating the virtual environment is active.
 
-## Step 5: Install Dependencies
+5. Install Dependencies
 With the virtual environment activated, install the required project dependencies:
 
 ```sh
@@ -87,18 +88,18 @@ pip install -r requirements.txt
 ```
 This will install Django, Django REST Framework, and other necessary dependencies listed in the requirements.txt file.
 
-## Process Migration:
+6.Process Migration:
 Make sure all data is up to date by runnning following:
 ```sh
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-## Launch Server
+7. Launch Server
 Run the application using:
 ```sh
 python manage.py runserver
 ```
-Test out the RESTful API endpoints listed in requirements.txt
+Test out the RESTFul API endpoints listed in Test.md
 
 ## Thanks!
