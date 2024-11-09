@@ -1,0 +1,10 @@
+Django==5.1.1
+djangorestframework==3.14.0
+mysqlclient==2.1.1
+djoser==2.1.0
+
+# Python version
+python_version == "3.13"
+
+# Pip version
+pip==23.0.1
