@@ -6,15 +6,16 @@
     - path('admin/', admin.site.urls),
     - path('api/', include('restaurant.urls')),
     - path('restaurant/booking/', include(router.urls)),
-    - View booking at (restaurant/booking/tables/)
+    - # View booking at (restaurant/booking/tables/)
     - path('auth/', include('djoser.urls')),
     - path('auth/', include('djoser.urls.authtoken')),
-    -  User registration at ('auth/users/')
+    - #User registration at ('auth/users/')
 
 
 ## App Level URLS:
-
-    - path('', views.home, name='home'),
+    
+    # Function based views
+    path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('book/', views.book, name='book'),
     path('reservations/', views.reservations, name='reservations'),
