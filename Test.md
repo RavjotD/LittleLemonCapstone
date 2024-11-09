@@ -5,8 +5,8 @@ These endpoints can be tested within the application itself upon launch after
 python manage.py runserver
 ```
 
-Can also be tested by downloading Insomnia and open source REST API client. 
-Donwalod: https://insomnia.rest/
+Can also be tested by downloading Insomnia, an open source REST API client. 
+Download: https://insomnia.rest/
  
 ## Project Level URLS:
 
