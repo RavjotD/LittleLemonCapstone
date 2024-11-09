@@ -11,7 +11,7 @@
 ## Features
 
 - Robust reservation system integrated with API endpoints and an admin panel for efficient management.
-- API endpoints for Data Transmission.
+-  RESTFul API endpoints for data transmission using JSON.
 
 
 ##  Getting Started with PRojectProject
