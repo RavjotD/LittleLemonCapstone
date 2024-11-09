@@ -1,6 +1,13 @@
 
 # Test the following features:
+These endpoints can be tested within the application itself upon launch after 
+```sh 
+python manage.py runserver
+```
 
+Can also be tested by downloading Insomnia and open source REST API client. 
+Donwalod: https://insomnia.rest/
+ 
 ## Project Level URLS:
 
     - path('admin/', admin.site.urls),
