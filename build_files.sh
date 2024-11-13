@@ -1,7 +1,22 @@
 #!/bin/bash
+
+# Exit on first error
+set -e
+
+# Install dependencies
 pip install -r requirements.txt
-python3.13 manage.py collectstatic --noinput
+
+# Collect static files
+python3.12 manage.py collectstatic --noinput
+
+# Ensure static output directory exists
 mkdir -p .vercel/output/static
-cp -r staticfiles/ .vercel/output/static/
-python3.13 manage.py makemigrations
-python3.13 manage.py migrate
+
+# Copy static files
+cp -r static/ .vercel/output/static/
+
+# Make migrations
+python3.12 manage.py makemigrations
+
+# Apply migrations
+python3.12 manage.py migrate
