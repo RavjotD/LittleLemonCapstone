@@ -1,3 +1,7 @@
-# build_files.sh
+#!/bin/bash
 pip install -r requirements.txt
-python manage.py collectstatic --noinput
+python3.13 manage.py collectstatic --noinput
+mkdir -p .vercel/output/static
+cp -r staticfiles/ .vercel/output/static/
+python3.13 manage.py makemigrations
+python3.13 manage.py migrate
