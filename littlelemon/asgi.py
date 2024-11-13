@@ -9,8 +9,8 @@ https://docs.djangoproject.com/en/5.1/howto/deployment/asgi/
 
 import os
 
-from django.core.asgi import get_asgi_application
+from django.core.asgi import get_asgi_app
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'littlelemon.settings')
 
-application = get_asgi_application()
+app = get_asgi_app()
