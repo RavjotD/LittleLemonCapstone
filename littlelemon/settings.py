@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.railway.app', '.now.sh', '127.0.0.1', '*']
+ALLOWED_HOSTS = ['.railway.app', '127.0.0.1']
 
 
 # Application definition
@@ -85,11 +85,23 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 DATABASE_URL = os.environ.get('DATABASE_URL')
 if DATABASE_URL:
     DATABASES = {
-        'default': dj_database_url.config(
-            default=os.getenv('DATABASE_URL'),
-            conn_max_age=600
-        )
+        'default': dj_database_url.config(default=DATABASE_URL)
     }
+
+# Database configuration with fallback values for local development
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('MYSQLDB', 'littlelemon'),
+        'USER': os.environ.get('MYSQLUSER', 'root'),
+        'PASSWORD': os.environ.get('MYSQLPASSWORD', 'root@123'),
+        'HOST': os.environ.get('MYSQLHOST', '127.0.0.1'),
+        'PORT': os.environ.get('MYSQLPORT', '3306'),
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+    }
+}
 
 
 # Password validation
@@ -126,14 +138,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'restaurant' / 'static',
-]
+STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+    BASE_DIR / 'restaurant/static',
+    # Remove any duplicate static directories
+]
 
-# Remove STATICFILES_STORAGE completely or use the basic Django storage
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# Add this for better static file handling with WhiteNoise
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
@@ -163,3 +176,5 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.railway.app',
     'http://127.0.0.1',
 ]
+
+
