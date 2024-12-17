@@ -85,18 +85,11 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-<<<<<<< Updated upstream
         'NAME': 'littlelemon',
         'USER': 'root',
         'PASSWORD': 'root@123',
         'HOST': '127.0.0.1',
         'PORT': '3306',
-=======
-        'NAME': 'ravjot19$default',
-        'USER': 'ravjot19',
-        'PASSWORD': 'root@1234',  # The password you just set
-        'HOST': 'ravjot19.mysql.pythonanywhere-services.com',
->>>>>>> Stashed changes
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
@@ -160,7 +153,6 @@ REST_FRAMEWORK = {
 
 
     ],
-
 
 'DEFAULT_AUTHENTICATION_CLASSES' : (
     'rest_framework.authentication.TokenAuthentication',
