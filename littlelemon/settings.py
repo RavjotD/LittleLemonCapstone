@@ -82,30 +82,19 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASE_URL = os.environ.get('DATABASE_URL')
-if DATABASE_URL:
-    # Railway database configuration
-    DATABASES = {
-        'default': dj_database_url.config(
-            default=DATABASE_URL,
-            conn_max_age=600
-        )
-    }
-else:
-    # Local development database configuration
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.environ.get('MYSQLDB', 'littlelemon'),
-            'USER': os.environ.get('MYSQLUSER', 'root'),
-            'PASSWORD': os.environ.get('MYSQLPASSWORD', 'root@123'),
-            'HOST': os.environ.get('MYSQLHOST', '127.0.0.1'),
-            'PORT': os.environ.get('MYSQLPORT', '3306'),
-            'OPTIONS': {
-                'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-            }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'littlelemon',
+        'USER': 'root',
+        'PASSWORD': 'root@123',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
     }
+}
 
 
 # Password validation
@@ -179,5 +168,3 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.railway.app',
     'http://127.0.0.1',
 ]
-
-
