@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['.railway.app', '127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['.amplifyapp.com', '127.0.0.1', ]
 
 
 # Application definition
