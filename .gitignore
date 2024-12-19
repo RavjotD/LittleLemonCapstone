@@ -16,6 +16,20 @@ db.sqlite3-journal
 # /staticfiles/  # Comment this out if it exists
 .env
 
+# Deployment files
+Procfile
+build.sh
+Readme.txt
+Test.md
+
+# Database backups
+db_backup.json
+littlelemon_backup.sql
+
+# Pipenv files (using requirements.txt instead)
+Pipfile
+Pipfile.lock
+
 # IDE
 .idea/
 .vscode/
@@ -24,4 +38,4 @@ db.sqlite3-journal
 
 # OS
 .DS_Store
-Thumbs.db 
+Thumbs.db
